@@ -14,7 +14,7 @@ RUN set -x \
 
 COPY entrypoint.sh /usr/local/bin/
 
-RUN chmod a+rwx usr/local/bin/entrypoint.sh
+RUN chmod a+rwx /usr/local/bin/entrypoint.sh
 
 VOLUME ["/tmp"]
 
