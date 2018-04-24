@@ -16,6 +16,8 @@ COPY entrypoint.sh /usr/local/bin/
 
 RUN chmod a+rwx /usr/local/bin/entrypoint.sh
 
+WORKDIR /tmp
+
 VOLUME ["/tmp"]
 
 EXPOSE 1080
