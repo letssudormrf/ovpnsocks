@@ -5,7 +5,7 @@ LABEL maintainer="letssudormrf"
 ENV CONFIG="*.ovpn"
 
 RUN set -ex \
-    && echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
+    && sed -i 's/https:/http:/g' /etc/apk/repositories \
     && apk --update add --no-cache openvpn dante-server socat \
     && printf "logoutput: stderr\n\ninternal: 0.0.0.0 port = 1080\nexternal: tun0\n\nuser.unprivileged: sockd\n\nsocksmethod: none\nclientmethod: none\n\nclient pass {\n    from: 0.0.0.0/0 to: 0.0.0.0/0\n    log: error\n}\n\nsocks pass {\n    from: 0.0.0.0/0 to: 0.0.0.0/0\n}" >> /etc/sockd.conf \ 
     && sed -i '/#\ and\ try\ and\ let\ resolvconf\ handle\ it/a\pkill sockd\nsockd -D' /etc/openvpn/up.sh \
