@@ -20,6 +20,6 @@ WORKDIR /tmp
 
 VOLUME ["/tmp"]
 
-EXPOSE 1080 8080
+EXPOSE 1080
 
 CMD ["entrypoint.sh"]
