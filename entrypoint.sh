@@ -1,5 +1,5 @@
 #!/bin/sh
-# export RELAY_TARGET=${RELAY_TARGET:-"squid.example.com:3128"}
+#export RELAY_TARGET=${RELAY_TARGET:-"squid.example.com:3128"}
 mkdir -p /dev/net
 mknod /dev/net/tun c 10 200
 if [ ! -z "$RELAY_TARGET" ]; then
