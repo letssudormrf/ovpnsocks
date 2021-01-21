@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#RELAY=${RELAY:-"1081;squid.corp.example.com:3128 1082;squid.corp.example.com:3128 1083;squid.corp.example.com:3128"}
+#RELAY=${RELAY:-"1081;squid.corp.example.com:3128 1082;irc.devel.example.com:6667"}
 
 mkdir -p /dev/net
 mknod /dev/net/tun c 10 200
