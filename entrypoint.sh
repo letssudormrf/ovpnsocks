@@ -1,7 +1,7 @@
 #!/bin/sh
 
-#RELAY_TCP=${RELAY_TCP:-"1081;squid.corp.example.com:3128 1082;irc.devel.example.com:6667"}
-#RELAY_UDP=${RELAY_UDP:-"1081;squid.corp.example.com:3128 1082;irc.devel.example.com:6667"}
+#RELAY_TCP=${RELAY_TCP:-"1081;squid.corp.example.com:3128 1082;squid.apac.example.com:3128 1083;irc.devel.example.com:6667"}
+#RELAY_UDP=${RELAY_UDP:-"53;10.68.5.26:53"}
 
 mkdir -p /dev/net
 mknod /dev/net/tun c 10 200
