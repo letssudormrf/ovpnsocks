@@ -1,7 +1,5 @@
 FROM alpine
 
-LABEL maintainer="letssudormrf"
-
 ENV CONFIG="*.ovpn"
 
 RUN set -ex \
